@@ -9,6 +9,8 @@ body {
     font-family: 'Arial', sans-serif;
     color: #333;
     line-height: 1.6;
+    background-color: #f4f4f4;
+
 }
 
 /* Header */
@@ -56,13 +58,8 @@ header .nav-links li a:hover {
     color: #f39c12;
 }
 header .nav-links li a.active {
-    content: '';
-    display: flex;
-    height: 2px;
-    background: #f39c12;
-    left: 50%;
-    bottom: -5px;
-    transition: width 0.3s ease, left 0.3s ease;
+    border-bottom: 2px solid #f4a261; /* Adds a bottom border to the active link */
+    padding-bottom: 2px; /* Adjust padding so the border is visible but not overlapping */
 }
 header .nav-links li a.active::after {
     width: 100%; /* Fully expand the underline for the active link */
@@ -128,6 +125,11 @@ header .social-links img {
     grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
     gap: 20px;
 }
+.work-gallery-resume {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 20px;
+}
 
 .work-item {
     background: #f9f9f9;
@@ -142,4 +144,171 @@ header .social-links img {
     border-color: #f39c12;
     box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
     cursor: pointer;
+}
+
+h1 {
+    font-size: 2rem;
+    margin-bottom: 20px;
+}
+
+p {
+    font-size: 1rem;
+    margin-bottom: 30px;
+}
+
+/* Contact Form Styling */
+.contact-section {
+    background-color: #fff;
+    padding: 30px;
+    margin: 30px auto;
+    width: 80%;
+    max-width: 600px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.contact-form {
+    display: flex;
+    flex-direction: column;
+}
+
+.form-group {
+    margin-bottom: 20px;
+}
+
+label {
+    font-size: 1rem;
+    margin-bottom: 5px;
+}
+
+input, textarea {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    font-size: 1rem;
+}
+
+button.submit-btn {
+    padding: 10px 20px;
+    background-color: #f4a261;
+    border: none;
+    color: white;
+    font-size: 1rem;
+    cursor: pointer;
+    border-radius: 5px;
+    transition: background-color 0.3s ease;
+}
+
+button.submit-btn:hover {
+    background-color: #e76f51;
+}
+
+/* Footer Styling */
+footer {
+    background-color: #333;
+    color: #fff;
+    text-align: center;
+    padding: 10px;
+    margin-top: 30px;
+}
+
+.resume-section {
+    background-color: #fff;
+    padding: 30px;
+    margin: 30px auto;
+    width: 80%;
+    max-width: 900px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.resume-content {
+    margin-top: 20px;
+}
+
+.resume-content h2 {
+    font-size: 1.5rem;
+    margin-bottom: 10px;
+    color: #2a9d8f;
+}
+
+.resume-content .job,
+.resume-content .school,
+.resume-content .skills,
+.resume-content .certifications {
+    margin-bottom: 20px;
+}
+
+.resume-content .job h3,
+.resume-content .school h3 {
+    font-size: 1.2rem;
+    margin-bottom: 5px;
+}
+
+.resume-content ul {
+    list-style-type: disc;
+    margin-left: 20px;
+}
+
+.resume-content a {
+    color: #2a9d8f;
+}
+
+.contact-info p {
+    font-size: 1rem;
+}
+
+/* About Me Section */
+.about-me-section {
+    padding: 2rem;
+    text-align: center;
+    background-color: #f4f4f9;
+}
+
+.about-me-section h1 {
+    font-size: 2.5rem;
+    color: #333;
+    margin-bottom: 1.5rem;
+}
+
+.about-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: flex-start;
+    gap: 2rem;
+    margin-top: 1.5rem;
+}
+
+.about-photo img {
+    width: 200px;
+    height: 200px;
+    border-radius: 50%;
+    object-fit: cover;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.about-text {
+    max-width: 600px;
+    text-align: left;
+    line-height: 1.6;
+    color: #555;
+}
+
+.about-text h2 {
+    font-size: 2rem;
+    color: #333;
+    margin-bottom: 1rem;
+}
+
+.about-text p {
+    margin-bottom: 1rem;
+}
+
+.about-text a {
+    color: #007BFF;
+    text-decoration: none;
+}
+
+.about-text a:hover {
+    text-decoration: underline;
 }
