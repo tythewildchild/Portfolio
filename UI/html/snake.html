@@ -4,36 +4,111 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Snake Game</title>
+    <link rel="stylesheet" href="../css/style.css"> <!-- Link your main CSS file -->
     <style>
-        body{
-            background-color: dimgray;
+        /* Additional Snake Page-Specific Styling */
+        .game-container {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            min-height: 80vh;
+            padding: 20px;
+            background-color: #f4f4f4;
         }
-        #canvas{
-            border: 2px solid #FFF;
-            position: absolute;
-            margin :auto;
-            top:0;
-            right:0;
-            left:0;
-            bottom:0;
+
+        canvas#canvas {
+            border: 5px solid #f39c12;
+            margin: 20px 0;
+            background-color: #000;
         }
-        #score{
-            color:red;
-            font-size: 70px;
+
+        #score {
+            color: #f39c12;
+            font-size: 2rem;
             text-align: center;
+            margin: 10px 0;
+        }
+
+        .controls {
+            color: black;
+            font-size: 1rem;
+            margin-top: 20px;
+        }
+
+        button a {
+            text-decoration: none;
+            color: #fff;
+        }
+
+        button {
+            padding: 10px 20px;
+            border: none;
+            background-color: #2a9d8f;
+            color: #fff;
+            font-size: 1rem;
+            border-radius: 5px;
+            cursor: pointer;
+            transition: background-color 0.3s ease;
+            margin-left: 20px;
+            margin-top: 20px;
+
+        }
+
+        button:hover {
+            background-color: #e76f51;
         }
     </style>
 </head>
 <body>
+    <!-- Header -->
     <header>
-        <button>
-            <a href=index.html style="text-decoration: none;">Back</a>
-        </button>
+        <div class="logo">
+            <a href="index.html">
+                <img src="../Data/Logo.jpg" alt="Ty's Portfolio Logo">
+            </a>
+        </div>
+        <div>
+            <nav>
+                <ul class="nav-links">
+                    <li><a href="index.html" >Portfolio</a></li>
+                    <li><a href="resume.html">Resume</a></li>
+                    <li><a href="aboutme.html">About Me</a></li>
+                    <li><a href="contact.html">Contact</a></li>
+                </ul>
+            </nav>
+        </div>
+        <div class="social-links">
+            <a href="https://www.facebook.com/tyj.hendershot" target="_blank"><img src="../Data/facebook.png" alt="Facebook"></a>
+            <a href="https://www.linkedin.com/in/ty-hendershot-280417228/" target="_blank"><img src="../Data/Linkedin.jpg" alt="LinkedIn"></a>
+        </div>
     </header>
-    <canvas id="canvas" height="400" width="400" style="background-color: black;"></canvas>
-    <div id="score"></div>
-    <footer style="color: #fff;">Controls: WASD</footer>
+
+    <!-- Main Game Section -->
+    <main>
+        <button id="go-back"><a>Back</a></button>
+        <div class="game-container">
+            <h1>Snake Game</h1>
+            <canvas id="canvas" height="400" width="400"></canvas>
+            <div id="score">Score: 0</div>
+            <div class="controls">Controls: WASD</div>
+            <br>
+        </div>
+    </main>
+
+    <!-- Footer -->
+    <footer>
+        <p>&copy; 2024 Your Name. All Rights Reserved.</p>
+    </footer>
+
+    <!-- Game Script -->
+    <script src="../js/snake.js"></script>
+    <script>
+        document.getElementById('go-back').addEventListener('click', () => 
+        {
+            window.history.back();    
+        });
+    </script>
 </body>
-<script src="../js/snake.js"></script>
 </html>

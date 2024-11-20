@@ -121,29 +121,44 @@ header .social-links img {
 }
 
 .work-gallery {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    display: flex;
+    justify-content: space-evenly;
+    flex-wrap: wrap;
     gap: 20px;
+    max-width: 90%;
+    margin: 0 auto;
 }
+
+.work-item {
+    background: #2a9d8f;
+    color: #fff;
+    font-size: 1.2em;
+    font-weight: bold;
+    padding: 20px 30px;
+    text-align: center;
+    text-decoration: none;
+    border-radius: 10px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease, box-shadow 0.3s ease, background-color 0.3s ease;
+    width: 20%;
+}
+
 .work-gallery-resume {
     display: grid;
     grid-template-columns: 1fr 1fr;
     gap: 20px;
 }
 
-.work-item {
-    background: #f9f9f9;
-    border: 1px solid #ddd;
-    padding: 20px;
-    text-align: center;
-    transition: transform 0.3s;
-}
 
 .work-item:hover {
     transform: scale(1.05);
     border-color: #f39c12;
     box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
     cursor: pointer;
+}
+.work-item a {
+    text-decoration: none;
+    color: #333;
 }
 
 h1 {
@@ -209,7 +224,7 @@ footer {
     color: #fff;
     text-align: center;
     padding: 10px;
-    margin-top: 30px;
+    /* margin-top: 30px; */
 }
 
 .resume-section {
@@ -311,4 +326,51 @@ footer {
 
 .about-text a:hover {
     text-decoration: underline;
+}
+
+/* Test Automation */
+.portfolio-details {
+    padding: 40px 20px;
+    background: #fff;
+    text-align: center;
+}
+
+.portfolio-details h1 {
+    font-size: 2em;
+    color: #333;
+    margin-bottom: 20px;
+}
+
+.portfolio-details p {
+    font-size: 1.2em;
+    margin-bottom: 30px;
+    color: #555;
+}
+
+/* Video Container */
+.video-container {
+    margin: 0 auto 20px auto;
+    max-width: 800px;
+}
+
+.video-container video {
+    width: 100%;
+    border-radius: 10px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+/* Source Code Link */
+.source-link {
+    margin-top: 20px;
+}
+
+.source-link a {
+    font-size: 1.2em;
+    color: #2a9d8f;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+.source-link a:hover {
+    color: #f39c12;
 }
