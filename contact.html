@@ -47,7 +47,7 @@
                     <label for="message">Your Message:</label>
                     <textarea id="message" name="message" rows="4" required></textarea>
                 </div>
-                <button type="submit" class="submit-btn" onclick="myFunction()">Send Message</button>
+                <button type="submit" class="submit-btn">Send Message</button>
             </form>
         </section>
     </main>
@@ -55,24 +55,5 @@
     <footer>
         <p>&copy; 2024 Ty Hendershot's Portfolio. All rights reserved.</p>
     </footer>
-    <script>
-        document.getElementById('ContactForm').addEventListener('submit', function(event) {
-            // Prevent the default form submission
-            event.preventDefault();
-            
-            // Submit the form data (this could be via fetch or other methods)
-            fetch('/api/form', {
-                method: 'POST',
-                body: new FormData(this)
-            }).then(response => {
-                if (response.ok) {
-                    // Reset the form fields after a successful submission
-                    document.getElementById('contactForm').reset();
-                    // Optionally, redirect to another page after submission
-                    window.location.href = '/thank-you';
-                }
-            });
-        });
-    </script>
 </body>
 </html>
