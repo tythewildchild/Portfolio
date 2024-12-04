@@ -56,9 +56,23 @@
         <p>&copy; 2024 Ty Hendershot's Portfolio. All rights reserved.</p>
     </footer>
     <script>
-        function myFunction(){
-            document.getElementById("ContactForm").reset();
-        }
+        document.getElementById('ContactForm').addEventListener('submit', function(event) {
+            // Prevent the default form submission
+            event.preventDefault();
+            
+            // Submit the form data (this could be via fetch or other methods)
+            fetch('/api/form', {
+                method: 'POST',
+                body: new FormData(this)
+            }).then(response => {
+                if (response.ok) {
+                    // Reset the form fields after a successful submission
+                    document.getElementById('contactForm').reset();
+                    // Optionally, redirect to another page after submission
+                    window.location.href = '/thank-you';
+                }
+            });
+        });
     </script>
 </body>
 </html>
